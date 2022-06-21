@@ -20,14 +20,20 @@
       </mat-card-content>
       <mat-card-actions align="end">
         
-        <button mat-button>Update</button>
-        <button mat-button>Delete</button>
+        <button mat-button id="btn-update">Update</button>
+        <button mat-button id="btn-delete">Delete</button>
       </mat-card-actions>
     </mat-card>
     <br>
     <mat-card>
       <mat-card-title>Actions Buttons</mat-card-title>
       <mat-card-subtitle>End</mat-card-subtitle>
+      <mat-card-content>
+        <div id="map"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer>
+
+        </script>
+      </mat-card-content>
       <mat-card-actions align="end">
         <button mat-button>Like</button>
         <button mat-button>SHARE</button>
