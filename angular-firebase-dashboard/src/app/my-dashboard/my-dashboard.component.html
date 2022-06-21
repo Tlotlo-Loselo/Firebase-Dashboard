@@ -1,0 +1,37 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <br>
+  <button mat-raised-button color="primary" routerLink="/home">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+  </button>
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-card>
+      <mat-card-title>User Profile</mat-card-title>
+      <!-- <mat-card-subtitle>End</mat-card-subtitle> -->
+      <mat-card-content>
+        <mat-list *ngIf="(user | async)">
+          <mat-list-item>First Name: {{ (user | async)?.firstName }}</mat-list-item>
+          <mat-list-item>Last Name: {{ (user | async)?.lastName }}</mat-list-item>
+          <mat-list-item>Mobile Numbers: {{ (user | async)?.mobile }}</mat-list-item>
+          <mat-list-item>Email: {{ (user | async)?.email }}</mat-list-item>
+          <!--<mat-list-item>Email Verification Status: {{ (afAuth.user | async)?.emailVerified }}</mat-list-item>  -->
+        </mat-list>
+      </mat-card-content>
+      <mat-card-actions align="end">
+        
+        <button mat-button>Update</button>
+        <button mat-button>Delete</button>
+      </mat-card-actions>
+    </mat-card>
+    <br>
+    <mat-card>
+      <mat-card-title>Actions Buttons</mat-card-title>
+      <mat-card-subtitle>End</mat-card-subtitle>
+      <mat-card-actions align="end">
+        <button mat-button>Like</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-list>
+</div>

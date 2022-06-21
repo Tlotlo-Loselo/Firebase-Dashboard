@@ -1,0 +1,57 @@
+Signup
+<br>
+<br>
+<button mat-raised-button color="primary" routerLink="/home">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+</button>
+
+<mat-card class="form-card">
+    <form [formGroup]="signupForm" (ngSubmit)="signup()">
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input autocomplete="off" formControlName="firstName"  type="text" matInput placeholder="First Name">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input autocomplete="off" formControlName="lastName"  type="text" matInput placeholder="Last Name">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Gender</mat-label>
+                <input autocomplete="off" formControlName="gender"  type="text" matInput placeholder="Gender">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Mobile Number</mat-label>
+                <input autocomplete="off" formControlName="mobile"  type="text" matInput placeholder="Mobile Number">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input formControlName="email"  type="email" matInput placeholder="Email">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input autocomplete="off" formControlName="password" type="password" matInput placeholder="password">
+            </mat-form-field>
+        </p>
+        <div *ngIf="firebaseErrorMessage != ''" class="error-style">
+            <span>{{ firebaseErrorMessage }}</span>
+        </div>
+
+        <button mat-raised-button color="primary">Signup</button>
+    </form>
+</mat-card>
+
+<div class="progressIndicator" [style.display]="isProgressVisible ? 'inline' : 'none' ">
+    <mat-progress-spinner class=" example-margin" color="primary" mode="indeterminate"></mat-progress-spinner>
+</div>
