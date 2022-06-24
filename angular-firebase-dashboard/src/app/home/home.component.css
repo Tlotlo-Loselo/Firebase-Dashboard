@@ -7,3 +7,12 @@
 button {
     margin: 5px;
 }
+
+mat-card {
+  left: 50%;
+  top: 10%;
+  /*position: absolute;*/
+  transform: translate(-50%);
+  align-items: center;
+  width: 250px;
+}
