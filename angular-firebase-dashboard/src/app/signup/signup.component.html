@@ -23,7 +23,10 @@ Signup
         <p>
             <mat-form-field appearance="outline">
                 <mat-label>Gender</mat-label>
-                <input autocomplete="off" formControlName="gender"  type="text" matInput placeholder="Gender">
+                <mat-select autocomplete="off" formControlName="gender"  type="text" matInput placeholder="Gender" required>
+                    <mat-option value="male">Male</mat-option>
+                    <mat-option value="female">Female</mat-option>
+                </mat-select>
             </mat-form-field>
         </p>
         <p>
